@@ -2,7 +2,7 @@ from typing import Any
 
 def verify_aws() -> dict[str, Any]:
     candidate = {
-        "candidate_name": "Your Test Candidate",
+        "candidate_name": "Yemi Olaniyan",
         "certificate_name": "AWS Certified Solutions Architect – Associate",
         "issuing_body": "Amazon Web Services",
         "credential_id": "AWS123456",

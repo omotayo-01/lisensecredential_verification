@@ -16,7 +16,7 @@ def verify_icu() -> dict[str, Any]:
         "verificationResult": {
             "claimType": "certification",
             "status": "verified" if verification_found else "not_found",
-            "confidenceScore": 95,
+            "confidenceScore": 79,
             "candidateClaim": candidate
         }
     }
