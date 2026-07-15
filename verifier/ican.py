@@ -1,6 +1,6 @@
 from typing import Any
 
-def verify_icu() -> dict[str, Any]:
+def verify_ican() -> dict[str, Any]:
     candidate = {
         "candidate_name": "Oluwapelumi Oluwatimileyin",
         "certificate_name": "ICAN membership",
