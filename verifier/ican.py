@@ -5,7 +5,7 @@ def verify_icu() -> dict[str, Any]:
         "candidate_name": "Oluwapelumi Oluwatimileyin",
         "certificate_name": "ICAN membership",
         "issuing_body": "Institute of Chartered Accountants of Nigeria(ICAN)",
-        "credential_id": "ICU1027156",
+        "credential_id": "ICAN19680306",
         "issue_date": "2025-03-01",
         "expiry_date": "2028-03-01"
     }
