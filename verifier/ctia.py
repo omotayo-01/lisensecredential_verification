@@ -5,7 +5,7 @@ def verify_ctia() -> dict[str, Any]:
         "candidate_name": "Olatunji Timothy",
         "certificate_name": "CompTIA Security+",
         "issuing_body": "CompTIA",
-        "credential_id": "CTA2022002005",
+        "credential_id": "Comp2022002005",
         "issue_date": "2022-03-01",
         "expiry_date": "2028-08-01"
     }

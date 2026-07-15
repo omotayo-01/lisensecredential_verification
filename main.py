@@ -8,6 +8,7 @@ from verifier.ican import verify_ican
 from verifier.icu import verify_icu
 from verifier.rn import verify_rn
 from verifier.aacn import verify_aacn
+from verifier.ctia import verify_ctia
 
 # Create the database table
 create_tables()
@@ -40,6 +41,10 @@ save_verification(rn_result)
 icu_result = verify_icu()
 save_verification(icu_result)
 
+#Ctia
+ctia_result = verify_ctia()
+save_verification(ctia_result)
+
 print(microsoft_result)
 print(cisco_result)
 print(aws_result)
@@ -47,3 +52,4 @@ print(ican_result)
 print(rn_result)
 print(icu_result)
 print(aacn_result)
+print(ctia_result)
