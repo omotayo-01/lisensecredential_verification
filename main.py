@@ -11,6 +11,10 @@ from verifier.aacn import verify_aacn
 from verifier.ctia import verify_ctia
 from verifier.csm import verify_csm
 from verifier.gpca import verify_gpca
+from verifier.sca import verify_sca
+from verifier.pmp import verify_pmp
+from verifier.itil import verify_itil
+from verifier.tds import verify_tds
 # Create the database table
 create_tables()
 
@@ -54,6 +58,22 @@ save_verification(csm_result)
 gpca_result = verify_gpca()
 save_verification(gpca_result)
 
+#Sca
+sca_result = verify_sca()
+save_verification(sca_result)
+
+#Pmp
+pmp_result = verify_pmp()
+save_verification(pmp_result)
+
+#Itil
+itil_result = verify_itil()
+save_verification(itil_result)
+
+#Tds
+tds_result = verify_tds()
+save_verification(tds_result)
+
 print(microsoft_result)
 print(cisco_result)
 print(aws_result)
@@ -64,3 +84,7 @@ print(aacn_result)
 print(ctia_result)
 print(csm_result)
 print(gpca_result)
+print(sca_result)
+print(pmp_result)
+print(itil_result)
+print(tds_result)

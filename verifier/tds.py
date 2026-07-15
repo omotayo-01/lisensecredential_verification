@@ -1,12 +1,12 @@
 from typing import Any
-def verify_csm() -> dict[str, Any]:
+def verify_tds() -> dict[str, Any]:
     candidate = {
-        "candidate_name": "Olatunji Timothy",
-        "certificate_name": "Certified Scrum Master(CSM)",
-        "issuing_body": "Certified Scrum Alliance",
-        "credential_id": "CSA029982927",
-        "issue_date": "2022-03-01",
-        "expiry_date": "2028-08-01"
+        "candidate_name": "Oseni Samuel",
+        "certificate_name": "Tableau Desktop Specialist",
+        "issuing_body": "Tableau",
+        "credential_id": "TAB03168927",
+        "issue_date": "2024-03-01",
+        "expiry_date": "2029-03-03"
     }
 
     verification_found = True

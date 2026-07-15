@@ -1,6 +1,5 @@
 from typing import Any
-
-def verify_microsoft() -> dict[str, Any]:
+def verify_sca() -> dict[str, Any]:
     candidate: dict[str, str] = {
          "candidate_name": "Akerele Idowu",
         "certificate_name": "Salesforce Certified Administrator",
