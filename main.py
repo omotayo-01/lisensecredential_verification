@@ -10,6 +10,7 @@ from verifier.rn import verify_rn
 from verifier.aacn import verify_aacn
 from verifier.ctia import verify_ctia
 from verifier.csm import verify_csm
+from verifier.gpca import verify_gpca
 # Create the database table
 create_tables()
 
@@ -48,6 +49,10 @@ save_verification(ctia_result)
 #Csm
 csm_result = verify_csm()
 save_verification(csm_result)
+
+#Gpca
+gpca_result = verify_gpca()
+save_verification(gpca_result)
 
 print(microsoft_result)
 print(cisco_result)
