@@ -9,7 +9,7 @@ from verifier.icu import verify_icu
 from verifier.rn import verify_rn
 from verifier.aacn import verify_aacn
 from verifier.ctia import verify_ctia
-
+from verifier.csm import verify_csm
 # Create the database table
 create_tables()
 
@@ -44,6 +44,10 @@ save_verification(icu_result)
 #Ctia
 ctia_result = verify_ctia()
 save_verification(ctia_result)
+
+#Csm
+csm_result = verify_csm()
+save_verification(csm_result)
 
 print(microsoft_result)
 print(cisco_result)
