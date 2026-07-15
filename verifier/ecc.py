@@ -22,7 +22,3 @@ def verify_ecc() -> dict[str, Any]:
     }
 
     return result
-
-
-
-
