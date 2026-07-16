@@ -15,6 +15,8 @@ from verifier.sca import verify_sca
 from verifier.pmp import verify_pmp
 from verifier.itil import verify_itil
 from verifier.tds import verify_tds
+from verifier.rhcsa import verify_rhcsa
+from verifier.vcp import verify_vcp
 # Create the database table
 create_tables()
 
@@ -74,6 +76,14 @@ save_verification(itil_result)
 tds_result = verify_tds()
 save_verification(tds_result)
 
+#Rhcsa
+rhcsa_result = verify_rhcsa()
+save_verification(rhcsa_result)
+
+#Vcp
+vcp_result = verify_vcp()
+save_verification(vcp_result)
+
 print(microsoft_result)
 print(cisco_result)
 print(aws_result)
@@ -88,3 +98,5 @@ print(sca_result)
 print(pmp_result)
 print(itil_result)
 print(tds_result)
+print(rhcsa_result)
+print(vcp_result)
