@@ -1,7 +1,11 @@
 from typing import Literal
 
-VerificationStatus = Literal["verified", "unverified", "No public verification method exists", "possible match"]
-
+VerificationStatus = Literal[
+    "verified",
+    "unverified",
+    "No public verification method exists",
+    "possible match",
+]
 def calculate_confidence(status: VerificationStatus) -> int:
     """
     Return a confidence score (0-100) based on the verification status.
@@ -9,9 +13,9 @@ def calculate_confidence(status: VerificationStatus) -> int:
 
     scores = {
         "verified": 98,
-        "possible_match": 82,
+        "possible match": 82,
         "No public verification method exists": 50,
-        "Unverified": 10,
+        "unverified": 10,
     }
 
     return scores.get(status, 0)

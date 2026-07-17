@@ -1,4 +1,5 @@
 from typing import Any
+import requests
 from database.database import get_connection
 def save_verification(result: dict[str, Any]) -> None:
     conn = get_connection()
@@ -34,4 +35,13 @@ def save_verification(result: dict[str, Any]) -> None:
     conn.close()
 
     print("Verification saved to database.")
+def send_request(url: str):
+    """
+    Send a GET request to a certificate provider.
+    """
+    try:
+        response = requests.get(url, timeout=10)
+        return response
+    except requests.RequestException:
+        return None
 
