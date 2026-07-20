@@ -25,6 +25,7 @@ microsoft_candidate = {
    "candidate_name": "Akanbi Olukayode",
         "certificate_name": "Microsoft Certified: Azure AI Engineer Associate",
         "issuing_body": "Microsoft",
+        "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
         "credential_id": "ABC123456789",
         "issue_date": "2025-05-10",
         "expiry_date": "None"
