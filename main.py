@@ -21,7 +21,15 @@ from verifier.vcp import verify_vcp
 create_tables()
 
 # Microsoft
-microsoft_result = verify_microsoft()
+microsoft_candidate = {
+   "candidate_name": "Akanbi Olukayode",
+        "certificate_name": "Microsoft Certified: Azure AI Engineer Associate",
+        "issuing_body": "Microsoft",
+        "credential_id": "ABC123456789",
+        "issue_date": "2025-05-10",
+        "expiry_date": "None"
+}
+microsoft_result = verify_microsoft(microsoft_candidate)
 save_verification(microsoft_result)
 
 # Cisco
@@ -29,7 +37,17 @@ cisco_result = verify_cisco()
 save_verification(cisco_result)
 
 # AWS
-aws_result = verify_aws()
+aws_candidate = {
+    "candidate_name": "Yemi Olaniyan",
+    "certificate_name": "AWS Certified Solutions Architect Associate",
+    "issuing_body": "Amazon Web Services",
+    "credential_id": "AWS123456",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2025-03-01",
+    "expiry_date": "2028-03-01",
+}
+
+aws_result = verify_aws(aws_candidate)
 save_verification(aws_result)
 
 #Ican
