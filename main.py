@@ -33,7 +33,15 @@ microsoft_result = verify_microsoft(microsoft_candidate)
 save_verification(microsoft_result)
 
 # Cisco
-cisco_result = verify_cisco()
+cisco_candidate = {
+"candidate_name": "Oladotun David",
+        "certificate_name": "Cisco Certified Network Associate",
+        "issuing_body": "Cisco",
+        "credential_id": "CCNA123456",
+        "issue_date": "2025-01-15",
+        "expiry_date": "2028-01-15"
+    }
+cisco_result = verify_cisco(cisco_candidate)
 save_verification(cisco_result)
 
 # AWS

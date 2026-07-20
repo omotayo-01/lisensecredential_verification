@@ -2,8 +2,6 @@ from typing import Any
 from verification import send_request
 from confidence import calculate_confidence
 def verify_microsoft(candidate: dict[str, Any]) -> dict[str, Any]:
-
-
     url =(candidate["badge_url"])
 
     response = send_request(url)
@@ -30,13 +28,3 @@ def verify_microsoft(candidate: dict[str, Any]) -> dict[str, Any]:
         }
     }
     return result
-
-
-
-   
-
-   
-    
-
-   
-

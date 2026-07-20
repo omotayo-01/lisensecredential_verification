@@ -3,9 +3,8 @@ from verification import send_request
 from confidence import calculate_confidence
 
 def verify_aws(candidate: dict[str, Any]) -> dict[str, Any]:
-   
-    url = ( candidate["badge_url"])
 
+    url = ( candidate["badge_url"])
     response = send_request(url)
    
 
