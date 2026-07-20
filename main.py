@@ -1,6 +1,5 @@
 from models import create_tables
 from verification import save_verification
-
 from verifier.microsoft import verify_microsoft
 from verifier.cisco import verify_cisco
 from verifier.aws import verify_aws
@@ -17,6 +16,7 @@ from verifier.itil import verify_itil
 from verifier.tds import verify_tds
 from verifier.rhcsa import verify_rhcsa
 from verifier.vcp import verify_vcp
+from review_queue import add_to_review_queue, get_review_queue
 # Create the database table
 create_tables()
 
@@ -32,6 +32,7 @@ microsoft_candidate = {
 }
 microsoft_result = verify_microsoft(microsoft_candidate)
 save_verification(microsoft_result)
+add_to_review_queue(microsoft_result)
 
 # Cisco
 cisco_candidate = {
@@ -44,7 +45,7 @@ cisco_candidate = {
     }
 cisco_result = verify_cisco(cisco_candidate)
 save_verification(cisco_result)
-
+add_to_review_queue(cisco_result)
 # AWS
 aws_candidate = {
     "candidate_name": "Yemi Olaniyan",
@@ -58,6 +59,7 @@ aws_candidate = {
 
 aws_result = verify_aws(aws_candidate)
 save_verification(aws_result)
+add_to_review_queue(aws_result)
 
 #Ican
 ican_result = verify_ican()
@@ -127,3 +129,5 @@ print(itil_result)
 print(tds_result)
 print(rhcsa_result)
 print(vcp_result)
+print("\nNeeds Review Queue")
+print(get_review_queue())
