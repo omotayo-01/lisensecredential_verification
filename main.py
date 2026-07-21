@@ -105,8 +105,18 @@ csm_result = verify_csm()
 save_verification(csm_result)
 
 #Gpca
-gpca_result = verify_gpca()
+gpca_candidate = {
+    "candidate_name": "Kaboom Kabaam",
+    "certificate_name": "Google Professional Cloud Architect",
+    "issuing_body": "Google Cloud",
+    "credential_id": "GPCA123456789",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2025-05-10",
+    "expiry_date": "None",
+}
+gpca_result = verify_gpca(gpca_candidate)
 save_verification(gpca_result)
+add_to_review_queue(gpca_result)
 
 #Sca
 sca_result = verify_sca()
