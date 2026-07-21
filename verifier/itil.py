@@ -1,23 +1,33 @@
 from typing import Any
-def verify_itil() -> dict[str, Any]:
-    candidate: dict[str, str] = {
-    "candidate_name": "Goodyear Ebele",
-    "certificate_name": "ITIL 4 Foundation",
-    "issuing_body": "PeopleCert",
-    "credential_id": "ITIL123456",
-    "issue_date": "2020-02-10",
-    "expiry_date": "2027-02-10"
-}
-    
-    verification_found =True
+from verification import send_request
+from confidence import calculate_confidence
+
+
+def verify_itil(candidate: dict[str, Any]) -> dict[str, Any]:
+
+    url = candidate["badge_url"]
+
+    response = send_request(url)
+
+    if response is None:
+        status = "No public verification method exists"
+
+    elif response.status_code == 404:
+        status = "unverified"
+
+    elif response.status_code == 200:
+        status = "verified"
+
+    else:
+        status = "unverified"
 
     result: dict[str, Any] = {
         "verificationResult": {
             "claimType": "certification",
-            "status": "Possible match" if verification_found else "not_found",
-            "confidenceScore": 70,
-            "candidateClaim": candidate
+            "status": status,
+            "confidenceScore": calculate_confidence(status),
+            "candidateClaim": candidate,
         }
-        }
-    
+    }
+
     return result

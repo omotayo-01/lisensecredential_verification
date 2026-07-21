@@ -190,8 +190,18 @@ save_verification(pmp_result)
 add_to_review_queue(pmp_result)
 
 #Itil
-itil_result = verify_itil()
+itil_candidate = {
+    "candidate_name": "Goodyear Ebele",
+    "certificate_name": "ITIL 4 Foundation",
+    "issuing_body": "PeopleCert",
+    "credential_id": "ITIL123456",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2020-02-10",
+    "expiry_date": "2027-02-10",
+}
+itil_result = verify_itil(itil_candidate)
 save_verification(itil_result)
+add_to_review_queue(itil_result)
 
 #Tds
 tds_result = verify_tds()
