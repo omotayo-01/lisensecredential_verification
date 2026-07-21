@@ -1,17 +1,7 @@
 from typing import Any
 from verification import send_request
 from confidence import calculate_confidence
-def verify_sca() -> dict[str, Any]:
-    candidate: dict[str, str] = {
-        "candidate_name": "Akerele Idowu",
-        "certificate_name": "Salesforce Certified Administrator",
-        "issuing_body": "Salesforce",
-        "credential_id": "SCA03032954",
-        "issue_date": "2018-05-10",
-        "expiry_date": "present"
-    }
-
-    
+def verify_sca(candidate: dict[str, Any]) -> dict[str, Any]:    
     email = "AkereleIdowu03@gmail.com"
 
     url = (

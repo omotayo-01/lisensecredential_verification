@@ -119,8 +119,19 @@ save_verification(gpca_result)
 add_to_review_queue(gpca_result)
 
 #Sca
-sca_result = verify_sca()
+sca_candidate = {
+    "candidate_name": "Akerele Idowu",
+    "certificate_name": "Salesforce Certified Administrator",
+    "issuing_body": "Salesforce",
+    "credential_id": "SCA03032954",
+    "email": "AkereleIdowu03@gmail.com",
+    "issue_date": "2018-05-10",
+    "expiry_date": "present",
+}
+
+sca_result = verify_sca(sca_candidate)
 save_verification(sca_result)
+add_to_review_queue(sca_result)
 
 #Pmp
 pmp_result = verify_pmp()
