@@ -1,26 +1,33 @@
 from typing import Any
-#from verification import send_request
+from verification import send_request
+from confidence import calculate_confidence
 
 
-def verify_pmp() -> dict[str, Any]:
-    candidate: dict[str, str] = {
-    "candidate_name": "Esan Kemisola",
-    "certificate_name": "Project Management Professional (PMP)",
-    "issuing_body": "Project Management Institute (PMI)",
-    "credential_id": "PMP70569w2982",
-    "issue_date": "2020-02-10",
-    "expiry_date": "2028-02-10"
-}
-    
-    verification_found =True
+def verify_pmp(candidate: dict[str, Any]) -> dict[str, Any]:
+
+    url = candidate["badge_url"]
+
+    response = send_request(url)
+
+    if response is None:
+        status = "No public verification method exists"
+
+    elif response.status_code == 404:
+        status = "unverified"
+
+    elif response.status_code == 200:
+        status = "verified"
+
+    else:
+        status = "unverified"
 
     result: dict[str, Any] = {
         "verificationResult": {
             "claimType": "certification",
-            "status": "verified" if verification_found else "not_found",
-            "confidenceScore": 99,
-            "candidateClaim": candidate
+            "status": status,
+            "confidenceScore": calculate_confidence(status),
+            "candidateClaim": candidate,
         }
-        }
-    
+    }
+
     return result

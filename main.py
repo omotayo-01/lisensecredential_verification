@@ -175,9 +175,19 @@ sca_result = verify_sca(sca_candidate)
 save_verification(sca_result)
 add_to_review_queue(sca_result)
 
-#Pmp
-pmp_result = verify_pmp()
+#PMP
+pmp_candidate = {
+    "candidate_name": "Esan Kemisola",
+    "certificate_name": "Project Management Professional (PMP)",
+    "issuing_body": "Project Management Institute (PMI)",
+    "credential_id": "PMP70569w2982",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2020-02-10",
+    "expiry_date": "2028-02-10",
+}
+pmp_result = verify_pmp(pmp_candidate)
 save_verification(pmp_result)
+add_to_review_queue(pmp_result)
 
 #Itil
 itil_result = verify_itil()
