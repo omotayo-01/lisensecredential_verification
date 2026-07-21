@@ -1,23 +1,32 @@
 from typing import Any
+from verification import send_request
+from confidence import calculate_confidence
 
-def verify_ecc() -> dict[str, Any]:
-    candidate = {
-        "candidate_name": "Ajeigbe William",
-        "certificate_name": "Certified Ethical Hacker (CEH)",
-        "issuing_body": "Ec-Council",
-        "credential_id": "ECC2022002845",
-        "issue_date": "2023-03-01",
-        "expiry_date": "2027-03-01"
-    }
 
-    verification_found = True
+def verify_ecc(candidate: dict[str, Any]) -> dict[str, Any]:
+
+    url = candidate["badge_url"]
+
+    response = send_request(url)
+
+    if response is None:
+        status = "No public verification method exists"
+
+    elif response.status_code == 404:
+        status = "unverified"
+
+    elif response.status_code == 200:
+        status = "verified"
+
+    else:
+        status = "unverified"
 
     result: dict[str, Any] = {
         "verificationResult": {
             "claimType": "certification",
-            "status": "verified" if verification_found else "not_found",
-            "confidenceScore": 95,
-            "candidateClaim": candidate
+            "status": status,
+            "confidenceScore": calculate_confidence(status),
+            "candidateClaim": candidate,
         }
     }
 

@@ -18,7 +18,7 @@ invalid_candidate = {
     "credential_id": "Comp4567890987",
     "badge_url": "https://www.credly.com/badges/DOES_NOT_EXIST/public_url",
     "issue_date": "2022-03-01",
-    "expiry_date": "2028-08-01",
+    "expiry_date": "2029-08-01",
 }
 
 

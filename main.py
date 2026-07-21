@@ -16,6 +16,7 @@ from verifier.itil import verify_itil
 from verifier.tds import verify_tds
 from verifier.rhcsa import verify_rhcsa
 from verifier.vcp import verify_vcp
+from verifier.ecc import verify_ecc
 from review_queue import add_to_review_queue, get_review_queue
 # Create the database table
 create_tables()
@@ -131,7 +132,23 @@ save_verification(rhcsa_result)
 vcp_result = verify_vcp()
 save_verification(vcp_result)
 
+#Ecc
+ecc_candidate = {
+    "candidate_name": "Ajeigbe William",
+    "certificate_name": "Certified Ethical Hacker (CEH)",
+    "issuing_body": "Ec-Council",
+    "credential_id": "ECC2022002845",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2023-03-01",
+    "expiry_date": "2027-03-01",
+}
+
+ecc_result = verify_ecc(ecc_candidate)
+save_verification(ecc_result)
+add_to_review_queue(ecc_result)
+
 print(microsoft_result)
+print(ecc_result)
 print(cisco_result)
 print(aws_result)
 print(ican_result)
