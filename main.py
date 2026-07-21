@@ -47,6 +47,7 @@ cisco_candidate = {
 cisco_result = verify_cisco(cisco_candidate)
 save_verification(cisco_result)
 add_to_review_queue(cisco_result)
+
 # AWS
 aws_candidate = {
     "candidate_name": "Yemi Olaniyan",
@@ -57,7 +58,6 @@ aws_candidate = {
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
-
 aws_result = verify_aws(aws_candidate)
 save_verification(aws_result)
 add_to_review_queue(aws_result)
@@ -88,6 +88,7 @@ aacn_candidate = {
 aacn_result = verify_aacn(aacn_candidate)
 save_verification(aacn_result)
 add_to_review_queue(aacn_result)
+
 #Rn
 rn_candidate = {
     "candidate_name": "Oladokun Ayooluwa",
@@ -98,7 +99,6 @@ rn_candidate = {
     "issue_date": "2025-03-01",
     "expiry_date": "2039-03-01",
 }
-
 rn_result = verify_rn(rn_candidate)
 save_verification(rn_result)
 add_to_review_queue(rn_result)
@@ -113,7 +113,6 @@ icu_candidate = {
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
-
 icu_result = verify_icu(icu_candidate)
 save_verification(icu_result)
 add_to_review_queue(icu_result)
@@ -218,9 +217,20 @@ tds_result = verify_tds(tds_candidate)
 save_verification(tds_result)
 add_to_review_queue(tds_result)
 
-#Rhcsa
-rhcsa_result = verify_rhcsa()
+# RHCSA
+rhcsa_candidate = {
+    "candidate_name": "Modashola Abisade",
+    "certificate_name": "Red Hat Certified System Administrator (RHCSA)",
+    "issuing_body": "Red Hat",
+    "credential_id": "RHCSA27893485",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2012-03-01",
+    "expiry_date": "2028-08-01",
+}
+
+rhcsa_result = verify_rhcsa(rhcsa_candidate)
 save_verification(rhcsa_result)
+add_to_review_queue(rhcsa_result)
 
 #VCP
 vcp_candidate = {
@@ -232,7 +242,6 @@ vcp_candidate = {
     "issue_date": "2023-04-14",
     "expiry_date": "2028-08-25",
 }
-
 vcp_result = verify_vcp(vcp_candidate)
 save_verification(vcp_result)
 add_to_review_queue(vcp_result)
@@ -247,7 +256,6 @@ ecc_candidate = {
     "issue_date": "2023-03-01",
     "expiry_date": "2027-03-01",
 }
-
 ecc_result = verify_ecc(ecc_candidate)
 save_verification(ecc_result)
 add_to_review_queue(ecc_result)
