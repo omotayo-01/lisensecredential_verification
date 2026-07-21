@@ -22,7 +22,7 @@ invalid_candidate = {
 }
 
 
-@patch("verifier.ceh.send_request")
+@patch("verifier.ecc.send_request")
 def test_valid_ecc(mock_send_request: MagicMock):
     mock_response = Mock()
     mock_response.status_code = 200
