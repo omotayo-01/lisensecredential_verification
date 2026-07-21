@@ -12,10 +12,10 @@ valid_candidate = {
 }
 
 invalid_candidate = {
-    "candidate_name": "John Doe",
+    "candidate_name": "John Dosunmu",
     "certificate_name": "CompTIA Security+",
     "issuing_body": "CompTIA",
-    "credential_id": "INVALID123",
+    "credential_id": "Comp4567890987",
     "badge_url": "https://www.credly.com/badges/DOES_NOT_EXIST/public_url",
     "issue_date": "2022-03-01",
     "expiry_date": "2028-08-01",
