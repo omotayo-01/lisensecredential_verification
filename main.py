@@ -203,9 +203,20 @@ itil_result = verify_itil(itil_candidate)
 save_verification(itil_result)
 add_to_review_queue(itil_result)
 
-#Tds
-tds_result = verify_tds()
+#TDS
+tds_candidate = {
+    "candidate_name": "Oseni Samuel",
+    "certificate_name": "Tableau Desktop Specialist",
+    "issuing_body": "Tableau",
+    "credential_id": "TAB03168927",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2024-03-01",
+    "expiry_date": "2029-03-03",
+}
+
+tds_result = verify_tds(tds_candidate)
 save_verification(tds_result)
+add_to_review_queue(tds_result)
 
 #Rhcsa
 rhcsa_result = verify_rhcsa()
