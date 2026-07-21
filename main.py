@@ -63,8 +63,19 @@ save_verification(aws_result)
 add_to_review_queue(aws_result)
 
 #Ican
-ican_result = verify_ican()
+ican_candidate = {
+    "candidate_name": "Oluwapelumi Oluwatimileyin",
+    "certificate_name": "ICAN membership",
+    "issuing_body": "Institute of Chartered Accountants of Nigeria (ICAN)",
+    "credential_id": "ICAN19680306",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2025-03-01",
+    "expiry_date": "2028-03-01",
+}
+
+ican_result = verify_ican(ican_candidate)
 save_verification(ican_result)
+add_to_review_queue(ican_result)
 
 #Aacn
 aacn_candidate = {
