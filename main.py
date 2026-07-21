@@ -222,9 +222,20 @@ add_to_review_queue(tds_result)
 rhcsa_result = verify_rhcsa()
 save_verification(rhcsa_result)
 
-#Vcp
-vcp_result = verify_vcp()
+#VCP
+vcp_candidate = {
+    "candidate_name": "Fashina Rebecca",
+    "certificate_name": "VMware Certified Professional (VCP)",
+    "issuing_body": "VMware",
+    "credential_id": "VMW2022007764",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2023-04-14",
+    "expiry_date": "2028-08-25",
+}
+
+vcp_result = verify_vcp(vcp_candidate)
 save_verification(vcp_result)
+add_to_review_queue(vcp_result)
 
 #Ecc
 ecc_candidate = {
