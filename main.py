@@ -133,8 +133,18 @@ save_verification(ctia_result)
 add_to_review_queue(ctia_result)
 
 #Csm
-csm_result = verify_csm()
+csm_candidate = {
+    "candidate_name": "Olatunji Timothy",
+    "certificate_name": "Certified Scrum Master (CSM)",
+    "issuing_body": "Scrum Alliance",
+    "credential_id": "CSA029982927",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2022-03-01",
+    "expiry_date": "2028-08-01",
+}
+csm_result = verify_csm(csm_candidate)
 save_verification(csm_result)
+add_to_review_queue(csm_result)
 
 #Gpca
 gpca_candidate = {

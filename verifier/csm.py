@@ -1,22 +1,32 @@
 from typing import Any
-def verify_csm() -> dict[str, Any]:
-    candidate = {
-        "candidate_name": "Olatunji Timothy",
-        "certificate_name": "Certified Scrum Master(CSM)",
-        "issuing_body": "Certified Scrum Alliance",
-        "credential_id": "CSA029982927",
-        "issue_date": "2022-03-01",
-        "expiry_date": "2028-08-01"
-    }
+from verification import send_request
+from confidence import calculate_confidence
 
-    verification_found = True
+
+def verify_csm(candidate: dict[str, Any]) -> dict[str, Any]:
+
+    url = candidate["badge_url"]
+
+    response = send_request(url)
+
+    if response is None:
+        status = "No public verification method exists"
+
+    elif response.status_code == 404:
+        status = "unverified"
+
+    elif response.status_code == 200:
+        status = "verified"
+
+    else:
+        status = "unverified"
 
     result: dict[str, Any] = {
         "verificationResult": {
             "claimType": "certification",
-            "status": "Possible match" if verification_found else "not_found",
-            "confidenceScore": 70,
-            "candidateClaim": candidate
+            "status": status,
+            "confidenceScore": calculate_confidence(status),
+            "candidateClaim": candidate,
         }
     }
 
