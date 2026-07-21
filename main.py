@@ -86,8 +86,18 @@ icu_result = verify_icu()
 save_verification(icu_result)
 
 #Ctia
-ctia_result = verify_ctia()
+ctia_candidate = {
+  "candidate_name": "Olatunji Timothy",
+    "certificate_name": "CompTIA Security+",
+    "issuing_body": "CompTIA",
+    "credential_id": "Comp2022002005",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2022-03-01",
+    "expiry_date": "2028-08-01",
+}
+ctia_result = verify_ctia(ctia_candidate)
 save_verification(ctia_result)
+add_to_review_queue(ctia_result)
 
 #Csm
 csm_result = verify_csm()
