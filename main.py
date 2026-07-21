@@ -72,7 +72,6 @@ ican_candidate = {
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
-
 ican_result = verify_ican(ican_candidate)
 save_verification(ican_result)
 add_to_review_queue(ican_result)
@@ -90,12 +89,34 @@ aacn_result = verify_aacn(aacn_candidate)
 save_verification(aacn_result)
 add_to_review_queue(aacn_result)
 #Rn
-rn_result = verify_rn()
+rn_candidate = {
+    "candidate_name": "Oladokun Ayooluwa",
+    "certificate_name": "Registered Nurse license (RN)",
+    "issuing_body": "Nursing and Midwifery Council of Nigeria (NMCN)",
+    "credential_id": "RN2022004008",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2025-03-01",
+    "expiry_date": "2039-03-01",
+}
+
+rn_result = verify_rn(rn_candidate)
 save_verification(rn_result)
+add_to_review_queue(rn_result)
 
 #Icu
-icu_result = verify_icu()
+icu_candidate = {
+    "candidate_name": "Omotayo Uzumaki",
+    "certificate_name": "Hospital ICU Training Certificate",
+    "issuing_body": "Lagos University Teaching Hospital",
+    "credential_id": "ICU1027156",
+    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "issue_date": "2025-03-01",
+    "expiry_date": "2028-03-01",
+}
+
+icu_result = verify_icu(icu_candidate)
 save_verification(icu_result)
+add_to_review_queue(icu_result)
 
 #Ctia
 ctia_candidate = {
