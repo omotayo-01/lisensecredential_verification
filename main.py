@@ -66,9 +66,17 @@ ican_result = verify_ican()
 save_verification(ican_result)
 
 #Aacn
-aacn_result = verify_aacn()
+aacn_candidate = {
+        "candidate_name": "Makanjuola Dasola",
+        "certificate_name": "Critical Care Registered Nurse(CCRN)",
+        "issuing_body": "American Association of Critical-Care Nurses (AACN)",
+        "credential_id": "CCRN2022002851",
+        "issue_date": "2025-03-01",
+        "expiry_date": "2038-03-01"
+    }
+aacn_result = verify_aacn(aacn_candidate)
 save_verification(aacn_result)
-
+add_to_review_queue(aacn_result)
 #Rn
 rn_result = verify_rn()
 save_verification(rn_result)
