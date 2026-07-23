@@ -6,10 +6,10 @@ valid_candidate = {
     "certificate_name": "Cisco Certified Network Associate",
     "issuing_body": "Cisco",
     "credential_id": "CCNA1-89024",
-    "issue_date": "2025-01-15",
+    "badge_url": "https://www.credly.com/badges/[BADGE_ID_OR_SLUG]/public_url",
+    "issue_date": "2024-03-01",
     "expiry_date": "2028-01-15",
 }
-
 invalid_candidate = {
     "candidate_name": "John Dodokire",
     "certificate_name": "Cisco Certified Network Associate",
