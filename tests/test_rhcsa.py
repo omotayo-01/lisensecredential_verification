@@ -6,7 +6,7 @@ valid_candidate = {
     "certificate_name": "Red Hat Certified System Administrator (RHCSA)",
     "issuing_body": "Red Hat",
     "credential_id": "RHCSA27893485",
-    "badge_url": "https://www.credly.com/badges/REAL_BADGE/public_url",
+    "badge_url": "https://rhtapps.redhat.com/verify?certId=160-122-750",
     "issue_date": "2012-03-01",
     "expiry_date": "2028-08-01",
 }

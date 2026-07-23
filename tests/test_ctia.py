@@ -16,7 +16,7 @@ invalid_candidate = {
     "certificate_name": "CompTIA Security+",
     "issuing_body": "CompTIA",
     "credential_id": "Comp4567890987",
-    "badge_url": "https://www.credly.com/badges/DOES_NOT_EXIST/public_url",
+    "badge_url": "https://aspen.eccouncil.org/verify",
     "issue_date": "2022-03-01",
     "expiry_date": "2029-08-01",
 }

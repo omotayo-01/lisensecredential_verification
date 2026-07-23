@@ -6,7 +6,7 @@ valid_candidate = {
     "certificate_name": "Certified Ethical Hacker (CEH)",
     "issuing_body": "Ec-Council",
     "credential_id": "ECC2022002845",
-    "badge_url": "https://www.credly.com/badges/REAL_BADGE/public_url",
+    "badge_url": "https://aspen.eccouncil.org/Verify",
     "issue_date": "2023-03-01",
     "expiry_date": "2027-03-01",
 }
