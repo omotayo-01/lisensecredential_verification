@@ -12,11 +12,11 @@ valid_candidate = {
 }
 
 invalid_candidate = {
-    "candidate_name": "Amidal Arobieke",
+    "candidate_name": "Amidat Arobieke",
     "certificate_name": "ITIL 4 Foundation",
     "issuing_body": "PeopleCert",
     "credential_id": "ITIL8767899",
-    "badge_url": "https://www.peoplecert.org/rest/api/",
+    "badge_url": "https://www.peoplecert.org/public-profile?ed=XCHu3ZqUTNLLpYuUFQv172TnbqU6MqoA",
     "issue_date": "2020-02-10",
     "expiry_date": "2028-02-10",
 }
