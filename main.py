@@ -26,7 +26,7 @@ microsoft_candidate = {
    "candidate_name": "Akanbi Olukayode",
         "certificate_name": "Microsoft Certified: Azure AI Engineer Associate",
         "issuing_body": "Microsoft",
-        "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+        "badge_url": "https://learn.microsoft.com/en-us/" or "https://certiport.pearsonvue.com/Certifications/Microsoft.aspx",
         "credential_id": "ABC123456789",
         "issue_date": "2025-05-10",
         "expiry_date": "None"
@@ -41,6 +41,7 @@ cisco_candidate = {
         "certificate_name": "Cisco Certified Network Associate",
         "issuing_body": "Cisco",
         "credential_id": "CCNA123456",
+        "badge_url": "https://www.certmetrics.com/cisco/public/verification.asp?pid=1&aid=1&credid=CCNA123456",
         "issue_date": "2025-01-15",
         "expiry_date": "2028-01-15"
     }
@@ -54,7 +55,7 @@ aws_candidate = {
     "certificate_name": "AWS Certified Solutions Architect Associate",
     "issuing_body": "Amazon Web Services",
     "credential_id": "AWS123456",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://cp.certmetrics.com/amazon/en/public/verify/credential" or "https://aws.amazon.com/certification/certification-digital-badges/",
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
@@ -68,7 +69,7 @@ ican_candidate = {
     "certificate_name": "ICAN membership",
     "issuing_body": "Institute of Chartered Accountants of Nigeria (ICAN)",
     "credential_id": "ICAN19680306",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.icanig.org/ican/verify",
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
@@ -82,6 +83,7 @@ aacn_candidate = {
         "certificate_name": "Critical Care Registered Nurse(CCRN)",
         "issuing_body": "American Association of Critical-Care Nurses (AACN)",
         "credential_id": "CCRN2022002851",
+        "badge_url": "https://www.aacnnursing.org/",
         "issue_date": "2025-03-01",
         "expiry_date": "2038-03-01"
     }
@@ -95,7 +97,7 @@ rn_candidate = {
     "certificate_name": "Registered Nurse license (RN)",
     "issuing_body": "Nursing and Midwifery Council of Nigeria (NMCN)",
     "credential_id": "RN2022004008",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.nmcn.gov.ng/",
     "issue_date": "2025-03-01",
     "expiry_date": "2039-03-01",
 }
@@ -109,7 +111,7 @@ icu_candidate = {
     "certificate_name": "Hospital ICU Training Certificate",
     "issuing_body": "Lagos University Teaching Hospital",
     "credential_id": "ICU1027156",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.luth.gov.ng/",
     "issue_date": "2025-03-01",
     "expiry_date": "2028-03-01",
 }
@@ -123,7 +125,7 @@ ctia_candidate = {
     "certificate_name": "CompTIA Security+",
     "issuing_body": "CompTIA",
     "credential_id": "Comp2022002005",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.comptia.org/en/certifications/security",
     "issue_date": "2022-03-01",
     "expiry_date": "2028-08-01",
 }
@@ -137,7 +139,7 @@ csm_candidate = {
     "certificate_name": "Certified Scrum Master (CSM)",
     "issuing_body": "Scrum Alliance",
     "credential_id": "CSA029982927",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
     "issue_date": "2022-03-01",
     "expiry_date": "2028-08-01",
 }
@@ -151,7 +153,7 @@ gpca_candidate = {
     "certificate_name": "Google Professional Cloud Architect",
     "issuing_body": "Google Cloud",
     "credential_id": "GPCA123456789",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://info.credly.com/solutions/product-certifications",
     "issue_date": "2025-05-10",
     "expiry_date": "None",
 }
@@ -165,6 +167,7 @@ sca_candidate = {
     "certificate_name": "Salesforce Certified Administrator",
     "issuing_body": "Salesforce",
     "credential_id": "SCA03032954",
+    "badge_url": "https://www.salesforce.com/training/certification/",
     "email": "AkereleIdowu03@gmail.com",
     "issue_date": "2018-05-10",
     "expiry_date": "present",
