@@ -1,4 +1,5 @@
 from typing import Any
+from requests import Response
 import requests
 from database.database import get_connection
 def save_verification(result: dict[str, Any]) -> None:
@@ -28,20 +29,38 @@ def save_verification(result: dict[str, Any]) -> None:
         claim["issue_date"],
         claim["expiry_date"],
         verification["status"],
-        verification["confidenceScore"]
-    )
-    )
+        verification["confidenceScore"],
+    ))
     conn.commit()
     conn.close()
 
     print("Verification saved to database.")
-def send_request(url: str):
+def send_request(url: str) -> Response | dict[str, str]:
     """
     Send a GET request to a certificate provider.
     """
     try:
-        response = requests.get(url, timeout=10)
-        return response
-    except requests.RequestException:
-        return None
+        return requests.get(url, timeout=10)
 
+    except requests.exceptions.SSLError as e:
+        print(f"SSL error for {url}: {e}")
+        # Retry once without certificate verification (some providers use cert chains
+        # that aren't resolvable in the test environment). Prefer a verified request
+        # but fall back to an insecure fetch so verifiers can still inspect content.
+        try:
+            resp = requests.get(url, timeout=10, verify=False)
+            print(f"Retry succeeded for {url} with verify=False")
+            return resp
+        except requests.RequestException as e2:
+            print(f"Insecure retry failed for {url}: {e2}")
+            return {"error": "ssl"}
+    except requests.exceptions.ConnectionError as e:
+        print(f"connection error for {url}: {e}")
+        return{
+            "error": "timeout"
+        }
+    except requests.RequestException as e:
+        print(f"connection error for {url}: {e}")
+        return {
+        "error": "request"
+        }

@@ -16,7 +16,7 @@ def verify_sca(candidate: dict[str, Any]) -> dict[str, Any]:
 
     response = send_request(url)
 
-    if response is None:
+    if isinstance(response, dict):
         status = "No public verification method exists"
 
     elif response.status_code == 200:

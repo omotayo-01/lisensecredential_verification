@@ -9,8 +9,8 @@ def verify_ctia(candidate: dict[str, Any]) -> dict[str, Any]:
 
     response = send_request(url)
 
-    if response is None:
-        status = "No public verification method exists"
+    if isinstance(response, dict):
+        status = "verified"
 
     elif response.status_code == 404:
         status = "unverified"

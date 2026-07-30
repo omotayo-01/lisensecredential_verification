@@ -5,21 +5,31 @@ from confidence import calculate_confidence
 
 def verify_cisco(candidate: dict[str, Any]) -> dict[str, Any]:
 
-    url = "https://www.certmetrics.com/cisco/public/verification.aspx"
+    url = candidate.get("badge_url") or "https://www.certmetrics.com/cisco/public/verification.aspx"
+
+    status ="unverified"
 
     response = send_request(url)
 
-    if response is None:
-        status = "No public verification method exists"
+    if isinstance(response, dict):
+        status = "unverified"
 
     elif response.status_code == 404:
         status = "unverified"
 
     elif response.status_code == 200:
-        status = "verified"
+        page = response.text or ""
+        low = page.lower()
 
-    else:
-        status = "unverified"
+
+        cert_ok = candidate["certificate_name"].lower() in low
+        name_ok = candidate["candidate_name"].lower() in low
+
+        if cert_ok and name_ok:
+            status = "verified"
+        else:
+            status = "unverified"
+        
 
     result: dict[str, Any] = {
         "verificationResult": {
