@@ -183,7 +183,7 @@ pmp_candidate = {
     "certificate_name": "Project Management Professional (PMP)",
     "issuing_body": "Project Management Institute (PMI)",
     "credential_id": "PMP70569w2982",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.pmi.org/certifications/certification-resources/verify-pmp",
     "issue_date": "2020-02-10",
     "expiry_date": "2028-02-10",
 }
@@ -197,7 +197,7 @@ itil_candidate = {
     "certificate_name": "ITIL 4 Foundation",
     "issuing_body": "PeopleCert",
     "credential_id": "ITIL123456",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.axelos.com/certifications/itil-certifications/verify-itil-certification",
     "issue_date": "2020-02-10",
     "expiry_date": "2027-02-10",
 }
@@ -211,7 +211,7 @@ tds_candidate = {
     "certificate_name": "Tableau Desktop Specialist",
     "issuing_body": "Tableau",
     "credential_id": "TAB03168927",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.tableau.com/verify",
     "issue_date": "2024-03-01",
     "expiry_date": "2029-03-03",
 }
@@ -226,7 +226,7 @@ rhcsa_candidate = {
     "certificate_name": "Red Hat Certified System Administrator (RHCSA)",
     "issuing_body": "Red Hat",
     "credential_id": "RHCSA27893485",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://www.redhat.com/en/services/certification/rhcsa",
     "issue_date": "2012-03-01",
     "expiry_date": "2028-08-01",
 }
@@ -241,7 +241,7 @@ vcp_candidate = {
     "certificate_name": "VMware Certified Professional (VCP)",
     "issuing_body": "VMware",
     "credential_id": "VMW2022007764",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://cp.certmetrics.com/vmware/",
     "issue_date": "2023-04-14",
     "expiry_date": "2028-08-25",
 }
@@ -255,7 +255,7 @@ ecc_candidate = {
     "certificate_name": "Certified Ethical Hacker (CEH)",
     "issuing_body": "Ec-Council",
     "credential_id": "ECC2022002845",
-    "badge_url": "https://www.credly.com/badges/xxxxxxxxxxxxxxxx/public_url",
+    "badge_url": "https://aspen.eccouncil.org/Verify",
     "issue_date": "2023-03-01",
     "expiry_date": "2027-03-01",
 }
