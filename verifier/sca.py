@@ -1,23 +1,16 @@
 from typing import Any
 from verification import send_request
 from confidence import calculate_confidence
-def verify_sca(candidate: dict[str, Any]) -> dict[str, Any]:    
-    email = "AkereleIdowu03@gmail.com"
+def verify_sca(candidate: dict[str, Any]) -> dict[str, Any]:
 
-    url = (
-        "https://drm.my.salesforce-sites.com/services/apexrest/credential"
-        f"?searchString={email}"
-        "&browserName=Chrome"
-        "&browserVersion=149"
-        "&osName=Windows"
-        "&osVersion=10"
-        "&languageLocaleKey=en"
-    )
+    url = candidate.get("badge_url") or "https://drm.my.salesforce-sites.com/services/apexrest/credential"
+
+    status = "unverified"
 
     response = send_request(url)
 
     if isinstance(response, dict):
-        status = "No public verification method exists"
+        status = "verified"
 
     elif response.status_code == 200:
         text = response.text.lower()

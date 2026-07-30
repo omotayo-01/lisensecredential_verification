@@ -1,6 +1,4 @@
 from verifier.sca import verify_sca
-from verifier.sca import verify_sca
-from verifier.sca import verify_sca
 
 valid_candidate = {
     "candidate_name": "Akerele Idowu",

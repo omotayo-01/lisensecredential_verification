@@ -1,8 +1,6 @@
 from typing import Any
 from verification import send_request
 from confidence import calculate_confidence
-
-
 def verify_cisco(candidate: dict[str, Any]) -> dict[str, Any]:
 
     url = candidate.get("badge_url") or "https://www.certmetrics.com/cisco/public/verification.aspx"
